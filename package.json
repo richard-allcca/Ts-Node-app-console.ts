@@ -1,0 +1,26 @@
+{
+  "name": "02-node-app-console-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev:nodemon": "rimraf ./src/outputs/output.xlsx && nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/yargs": "^17.0.32",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "yargs": "^17.7.2"
+  }
+}
