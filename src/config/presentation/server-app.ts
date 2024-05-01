@@ -5,19 +5,23 @@ interface IRunOptions {
   base: number;
   limit: number;
   showTable: boolean;
+  fileName: string;
+  fileDestination: string;
 }
 
 export class ServerApp {
 
   static run(options: IRunOptions): void {
-    const { base, limit, showTable } = options;
+    const {
+      base, limit, showTable, fileName, fileDestination
+    } = options;
 
     const table = new CreateTable().execute({ multiplier: base, limit });
 
     const saveTable = new SaveFile()
       .execute({
         fileContent: table,
-        fileDestination: `outputs/table-${base}`
+        fileDestination: `${fileDestination}/${fileName}-${base}`
       });
 
     saveTable

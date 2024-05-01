@@ -30,6 +30,18 @@ export const yargsPlugin = yards(hideBin(process.argv))
     default: false,
     describe: 'Show multiplication table'
   })
+  .option('n', {
+    alias: 'name',
+    type: 'string',
+    default: 'multiplication-table',
+    describe: 'File name'
+  })
+  .option('d', {
+    alias: 'destination',
+    type: 'string',
+    default: 'outputs',
+    describe: 'File destination'
+  })
   // Validate parameters values
   .check((argv, options) => {
     if (argv.b < 1) throw 'Error: base must be greater than 0';

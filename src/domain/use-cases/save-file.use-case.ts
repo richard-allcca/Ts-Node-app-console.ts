@@ -31,7 +31,9 @@ export class SaveFile implements SaveFileOptions {
       // recursive crea carpetas anidadas si eso indicas en output path
       fs.mkdirSync(fileDestination, { recursive: true });
 
+      // Guardar el resultado de la tabla en un archivo
       fs.writeFileSync(`${fileDestination}/${fileName}.txt`, fileContent);
+
       return true;
     } catch (error: any) {
       console.log(error.message);
