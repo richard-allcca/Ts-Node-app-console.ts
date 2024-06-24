@@ -1,6 +1,6 @@
 # App console
 
-App for console
+App for console - Create table multiplication with parameters added from console
 
 ## Requirements
 
