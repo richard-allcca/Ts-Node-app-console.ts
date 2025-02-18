@@ -3,3 +3,4 @@ src/outputs/
 node_modules/
 infobae-resolvers.json
 src/json-to-excel.ts
+/dist

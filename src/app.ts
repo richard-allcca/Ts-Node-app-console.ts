@@ -12,16 +12,9 @@ import { createExcelTableFromJSON } from './json-to-excel';
 
 function main() {
 
-  // SECTION - Yargs and table Of Multiple
-  // console.log(yargsPlugin);
-
   const {
     b: multiplier, l: limit, s: showLog, n: fileName, d: fileDestination
   } = yargsPlugin;
-
-  // tableOfMultiple(multiplier, limit, showLog);
-
-  // SECTION - ServerApplication
 
   ServerApp.run({ base: multiplier, limit, showTable: showLog, fileDestination, fileName });
 
